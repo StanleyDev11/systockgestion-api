@@ -20,15 +20,14 @@
 					"raw": "{\n    \"action\": \"login\",\n    \"username\": \"admin\",\n    \"password\": \"password\"\n}"
 				},
 				"url": {
-					"raw": "https://systockgestion.infinityfreeapp.com/api/auth",
+					"raw": "https://systockgestion-api.onrender.com/auth",
 					"protocol": "https",
 					"host": [
-						"systockgestion",
-						"infinityfreeapp",
+						"systockgestion-api",
+						"onrender",
 						"com"
 					],
 					"path": [
-						"api",
 						"auth"
 					]
 				}
@@ -47,15 +46,14 @@
 					}
 				],
 				"url": {
-					"raw": "https://systockgestion.infinityfreeapp.com/api/stock-movements",
+					"raw": "https://systockgestion-api.onrender.com/stock-movements",
 					"protocol": "https",
 					"host": [
-						"systockgestion",
-						"infinityfreeapp",
+						"systockgestion-api",
+						"onrender",
 						"com"
 					],
 					"path": [
-						"api",
 						"stock-movements"
 					]
 				}
