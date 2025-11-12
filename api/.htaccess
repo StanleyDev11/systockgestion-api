@@ -1,0 +1,18 @@
+# Activer le moteur de réécriture d'URL
+RewriteEngine On
+
+# Règle existante pour passer le header "Authorization" à PHP
+RewriteCond %{HTTP:Authorization} .
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+# --- Redirection vers le routeur (Front Controller) ---
+
+# Si la requête ne correspond pas à un fichier existant
+RewriteCond %{REQUEST_FILENAME} !-f
+# Si la requête ne correspond pas à un dossier existant
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rediriger toutes les autres requêtes vers index.php
+# L = dernière règle à appliquer
+# QSA = ajouter les paramètres de la requête (ex: ?id=123)
+RewriteRule ^(.*)$ index.php [L,QSA]

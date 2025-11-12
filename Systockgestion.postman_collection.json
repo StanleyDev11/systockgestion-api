@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "c1b2a3d4-e5f6-7890-1234-abcdef123456",
+		"name": "Systockgestion API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth - Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\": \"login\",\n    \"username\": \"admin\",\n    \"password\": \"password\"\n}"
+				},
+				"url": {
+					"raw": "https://systockgestion.infinityfreeapp.com/api/auth",
+					"protocol": "https",
+					"host": [
+						"systockgestion",
+						"infinityfreeapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Stock Movements",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer VOTRE_TOKEN_DE_SESSION",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://systockgestion.infinityfreeapp.com/api/stock-movements",
+					"protocol": "https",
+					"host": [
+						"systockgestion",
+						"infinityfreeapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"stock-movements"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
