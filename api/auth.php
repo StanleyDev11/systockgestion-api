@@ -25,6 +25,6 @@ if ($method == 'POST') {
     echo json_encode(['message' => 'Only POST method is supported for auth']);
 }
 
-$conn->close();
+//$conn->close();
 ?>
 
